@@ -1,0 +1,14 @@
+{
+  "name": "Teste2",
+  "version": "0.0.1",
+  "description": "Teste2",
+  "main": "init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elvis Ferreira Coelho",
+  "license": "ISC",
+  "devDependencies": {
+    "socket.io": "^1.0.6"
+  }
+}

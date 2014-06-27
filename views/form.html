@@ -1,0 +1,33 @@
+<div class="window">
+	<div class="header">Adicionar Livros</div>
+	<div class="content">
+		<table>
+			<tr>
+				<td>Titulo</td>
+				<td>
+					<input type="text" class="form-control" placeholder="Titulo" ng-model="livro.title">
+				</td>
+			</tr>
+			<tr>
+				<td>Autor</td>
+				<td>
+					<input type="text" class="form-control" placeholder="Autor" ng-model="livro.author" >
+				</td>
+			</tr>
+			<tr>
+				<td>Editora</td>
+				<td>
+					<input type="text" class="form-control" placeholder="Editora" ng-model="livro.publisher">
+				</td>
+			</tr>
+			<tr>
+				<td>ISBN</td>
+				<td>
+					<input type="text" class="form-control" placeholder="ISBN" ng-model="livro.isbn" >
+				</td>
+			</tr>
+		</table>
+		<button type="button" class="btn btn-default" ng-click="cancelar()">Cancelar</button>
+		<button type="button" class="btn btn-default" ng-click="adicionar(livro)">Adicionar</button>
+	</div>
+</div>

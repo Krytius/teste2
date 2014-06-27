@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="pt-br" />
+		<title>Livros</title>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/app.css" />
+		<base href="/">
+	</head>
+	
+	<body ng-controller="mainController">
+
+		<div class="col-md-3 pesquisa" id="lista">
+			<div class="col-md-12">
+				<h2>Livros</h2>
+				<button type="button" class="btn btn-default" ng-click="adicionar()">Adicionar</button>
+				<input type="text" class="form-control" placeholder="Buscar" ng-model="search.title" >
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 pull-left">
+					<div class="click" ng-repeat="item in books | filter:search" data={{item._id}}  
+									   ng-click="listar($event, $index)" 
+									   ng-class="{ 'active': $index == selectedIndex }">
+						{{ item.title }}
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="col-md-9">
+			<div ng-view></div>
+		</div>
+
+		<script src="http://localhost:1000/socket.io/socket.io.js"></script>
+		<script src="assets/js/angular.min.js"></script>
+		<script src="assets/js/angular-route.min.js"></script>
+		<script src="assets/js/angular-resource.min.js"></script>
+		<script src="assets/js/controllers.js"></script>
+		</body>
+</html>
